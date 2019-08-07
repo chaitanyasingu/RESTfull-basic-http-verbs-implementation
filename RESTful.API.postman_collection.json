@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "ca86258f-5230-424e-889c-2d792f70fe8b",
+		"name": "RESTful.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Id",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "FullName",
+							"value": "Carla Hootkooper",
+							"type": "text"
+						},
+						{
+							"key": "PhoneNumber",
+							"value": "06788499382",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "7",
+							"disabled": true
+						},
+						{
+							"key": "FullName",
+							"value": "Carla Hootkooper",
+							"disabled": true
+						},
+						{
+							"key": "PhoneNumber",
+							"value": "0677586789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Id",
+							"value": "7",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "FullName",
+							"value": "Carla Mermaid",
+							"type": "text"
+						},
+						{
+							"key": "PhoneNumber",
+							"value": "0099889989",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomerField",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "FullName",
+							"value": "Chaitanya Singu",
+							"type": "text"
+						},
+						{
+							"key": "PhoneNumber",
+							"value": "01201201201",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/6/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAllCustomers",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"op\":\"replace\",\n\t\"path\" : \"/IsSalaryCredited\",\n\t\"value\" : false\n\t\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddOrderToExistingCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"CustomerId\" : 1,\n\t\"OrderList\" : [\n\t\t{ \"OrderId\" : 1, \"Amount\" : {\"Currency\" : \"euro\", \"Amount\": \"10.77\" } }\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomerOrders",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"op\":\"replace\",\n\t\"path\" : \"/IsDelivered\",\n\t\"value\" : false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomerOrders",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54889/api/v1/customers/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54889",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

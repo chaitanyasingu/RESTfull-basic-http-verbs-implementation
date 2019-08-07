@@ -10,6 +10,8 @@ namespace RESTful.API.Models
         usd = 1,
         euro = 2,
         inr = 3
+
+
     }
     public class Price
     {
